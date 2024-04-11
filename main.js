@@ -22,3 +22,17 @@ import { setupCounter } from './counter.js'
 // `
 
 // setupCounter(document.querySelector('#counter'))
+
+async function fetchDataFromAPIEndpoint() {
+    const cards = await fetch('/api/fetchNotion').then((res) => res.json().then((data) => data.results))
+
+    document.querySelector("#app").innerHTML = cards.map((card) => `
+        <article>
+            <img class="logo" src="${card.properties.Imagem.rich_text[0].href}" alt="Imagem de perfil de ${card.properties.Name.title[0].plain_text}" />
+            <h2>${card.properties.Name.title[0].plain_text} - ${card.properties.Email.rich_text[0].plain_text}</h2>
+            <p>${card.properties.Descricao.rich_text[0].plain_text}</p>
+        </article>
+    `).join('')
+}
+
+fetchDataFromAPIEndpoint()
