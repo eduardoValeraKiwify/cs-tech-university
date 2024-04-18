@@ -18,7 +18,13 @@ export const handler = async (event, context) => {
                 select: {
                     equals: "Participantes"
                 }
-            }
+            },
+            sorts: [
+                {
+                    property: "Name",
+                    direction: "ascending"
+                }
+            ]
         })
     
         return {

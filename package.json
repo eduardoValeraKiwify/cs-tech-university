@@ -13,6 +13,7 @@
     "vite": "^5.2.0"
   },
   "dependencies": {
-    "@notionhq/client": "^2.2.15"
+    "@notionhq/client": "^2.2.15",
+    "aos": "^2.3.4"
   }
 }
