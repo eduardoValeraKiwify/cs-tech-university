@@ -12,7 +12,13 @@ export const handler = async (event, context) => {
     const databaseId = 'aaba5216e5a54359a6dff3bcb103fbb8';
     try {
         const response = await notion.databases.query({
-            database_id: databaseId
+            database_id: databaseId,
+            sorts: [
+              {
+                property: "Nota Final Total",
+                direction: "descending"
+            }
+          ]
         })
     
         return {
