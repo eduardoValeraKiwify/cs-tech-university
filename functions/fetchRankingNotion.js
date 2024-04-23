@@ -9,16 +9,10 @@ const notion = new Client({
 
 export const handler = async (event, context) => {
     
-    const databaseId = '83aa83f3b6f145f3a00e676d75608f38';
+    const databaseId = 'aaba5216e5a54359a6dff3bcb103fbb8';
     try {
         const response = await notion.databases.query({
-            database_id: databaseId,
-            filter: {
-                property: "Status",
-                select: {
-                    equals: "Participantes"
-                }
-            }
+            database_id: databaseId
         })
     
         return {
