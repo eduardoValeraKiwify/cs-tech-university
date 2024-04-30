@@ -24,16 +24,33 @@ async function fetchTeamDataFromAPIEndpoint() {
     `).join('')
 }
 
+function defineranking(index) {
+  if(index <= 2)
+    return 'filter-top-3 filter-top-10'
+  if (index <= 9)
+    return 'filter-top-10'
+  return ''
+
+}
+
 async function fetchRankingDataFromAPIEndpoint() {
   const participants = await fetch('/api/fetchRankingNotion').then((res) => res.json().then((data) => data.results))
 
-  document.querySelector("#ranking").innerHTML = participants.map((participant) => `
-    <div class="col-lg-3 col-md-6 portfolio-item isotope-item filter-app">
-      <div class="portfolio-content h-100 content-participant">
-        <img src="${ participant.properties["Foto de Perfil"].rich_text.length !== 0 ? participant.properties["Foto de Perfil"].rich_text[0].href: 'https://yt3.googleusercontent.com/xHTafD9jEMW-QIHYaVN7ANlPEnWXFa3W5Sfsck76GjFRdxixaWWMSJnFftlEA-oQTzHzVSff=s900-c-k-c0x00ffffff-no-rj'}" class="img-fluid" alt="">
-        <div class="portfolio-info">
-          <h4>Pontuação: ${participant.properties["Nota Final Total"].formula.number}</h4>
-          <p>${participant.properties.Nome.title[0].plain_text}</p>
+  document.querySelector("#ranking").innerHTML = participants.map((participant, index) => `
+    <div class="col-lg-12 col-md-6 portfolio-item isotope-item ${defineranking(index)}">
+      <div class="portfolio-content box-participant box-participant-${index}">
+        <div class="info-participant">
+          <div class="info-participant-thumb">
+            <img src="${participant.properties['Foto de Perfil'].rich_text.length > 0 ? participant.properties['Foto de Perfil'].rich_text[0].plain_text : '/assets/img/kiwify-logo.jpg'}" class="img-fluid" alt="">
+          </div>
+          <div class="info-participant-name">
+            <h5>${participant.properties.Nome.title[0].plain_text}</h5>
+            <span>${participant.properties.Cargo.select.name}</span>
+          </div>
+          <div class="info-participant-prize">
+            <h5>Pontuação</h5>
+            <span>${participant.properties['Nota Final Total'].formula.number}</span>
+          </div>
         </div>
       </div>
     </div><!-- End Portfolio Item -->
