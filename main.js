@@ -52,6 +52,7 @@ async function fetchRankingDataFromAPIEndpoint() {
             <span>${participant.properties['Nota Final Total'].formula.number}</span>
           </div>
         </div>
+        <div class="box-participant-shine"></div>
       </div>
     </div><!-- End Portfolio Item -->
     `).join('')

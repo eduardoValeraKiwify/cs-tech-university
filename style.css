@@ -296,3 +296,92 @@ button:focus-visible {
   font-size: 1.4rem;
   transition: 0.5s;
 }
+
+.box-participant:hover .box-participant-shine 
+{
+  opacity: 1;
+  top: -290%;
+  left: -55%;
+  transition-property: left, top, opacity;
+  transition-duration: 0.7s, 0.7s, 0.15s;
+  transition-timing-function: ease;
+  z-index: 1;
+}
+
+.box-participant:active .box-participant-shine
+{
+  opacity: 0;
+}
+
+.box-participant-shine 
+{
+  content: "";
+  position: absolute;
+  top: -500%;
+  left: -210%;
+  width: 200%;
+  height: 1000%;
+  opacity: 0;
+  transform: rotate(30deg);
+  
+  background: rgba(255, 255, 255, 0.13);
+  background: linear-gradient(
+    to right, 
+    rgba(255, 255, 255, 0.13) 0%,
+    rgba(255, 255, 255, 0.13) 77%,
+    rgba(255, 255, 255, 0.5) 92%,
+    rgba(255, 255, 255, 0.0) 100%
+  );
+}
+
+@media only screen and (max-width : 991px) 
+{
+  .box-participant {
+    height: 350px;
+  }
+
+  .info-participant
+  {
+    display: block;
+    padding: 0;
+  }
+
+  .info-participant-name::before, .info-participant-prize::before
+  {
+    display: none;
+  }
+
+  .info-participant-thumb
+  {
+    width: 100%;
+    text-align: center;
+    margin-top: 15px;
+  }
+
+  .info-participant-name
+  {
+    width: 100%;
+    padding: 0;
+    text-align: center;
+    margin-top: 15px;
+  }
+
+  .info-participant-prize
+  {
+    width: 100%;
+    padding: 0;
+    text-align: center;
+  }
+
+  .box-participant:hover .box-participant-shine
+  {
+    top: -40%;
+    left: -40%;
+  }
+
+  .box-participant-shine
+  {
+    top: -100%;
+    height: 200%;
+  }
+}
