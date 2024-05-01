@@ -31,7 +31,7 @@ async function fetchRankingDataFromAPIEndpoint() {
   const participants = await fetch('/api/fetchRankingNotion').then((res) => res.json().then((data) => data.results))
 
   document.querySelector("#ranking").innerHTML = participants.map((participant, index) => `
-    <div class="col-lg-6 col-md-6 portfolio-item isotope-item ${defineranking(index)}">
+    <div class="col-lg-12 col-md-6 portfolio-item isotope-item ${defineranking(index)}">
       <div class="portfolio-content box-participant box-participant-${index}">
         <div class="info-participant">
           <div class="info-participant-thumb">
