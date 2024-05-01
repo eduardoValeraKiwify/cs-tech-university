@@ -344,6 +344,11 @@ button:focus-visible {
   );
 }
 
+.team .member .member-info-content
+{
+  left: 0;
+}
+
 @media only screen and (max-width : 991px) 
 {
   .box-participant {

@@ -12,12 +12,6 @@ async function fetchTeamDataFromAPIEndpoint() {
                     <h4>${card.properties.Name.title[0].plain_text}</h4>
                     <span>${card.properties.Descricao.rich_text[0].plain_text}</span>
                   </div>
-                  <div class="social">
-                    <a href=""><i class="bi bi-twitter"></i></a>
-                    <a href=""><i class="bi bi-facebook"></i></a>
-                    <a href=""><i class="bi bi-instagram"></i></a>
-                    <a href=""><i class="bi bi-linkedin"></i></a>
-                  </div>
                 </div>
               </div>
             </div><!-- End Team Member -->
@@ -37,7 +31,7 @@ async function fetchRankingDataFromAPIEndpoint() {
   const participants = await fetch('/api/fetchRankingNotion').then((res) => res.json().then((data) => data.results))
 
   document.querySelector("#ranking").innerHTML = participants.map((participant, index) => `
-    <div class="col-lg-12 col-md-6 portfolio-item isotope-item ${defineranking(index)}">
+    <div class="col-lg-6 col-md-6 portfolio-item isotope-item ${defineranking(index)}">
       <div class="portfolio-content box-participant box-participant-${index}">
         <div class="info-participant">
           <div class="info-participant-thumb">
@@ -57,8 +51,6 @@ async function fetchRankingDataFromAPIEndpoint() {
     </div><!-- End Portfolio Item -->
     `).join('')
 }
-
-fetchTeamDataFromAPIEndpoint()
 
 fetchRankingDataFromAPIEndpoint().then(() => {
 
@@ -93,3 +85,5 @@ fetchRankingDataFromAPIEndpoint().then(() => {
   });
 
 })
+
+fetchTeamDataFromAPIEndpoint()
