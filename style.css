@@ -285,16 +285,26 @@ button:focus-visible {
 {
   padding-left: 16px;
   transition: 0.5s;
+  /* text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #38D959, 0 0 40px #38D959, 0 0 50px #38D959, 0 0 60px #38D959, 0 0 70px #38D959; */
 }
 
-.box-participant:hover .info-participant-name h5 {
+.box-participant:hover .info-participant-name h5 
+{
   font-size: 1.4rem;
   transition: 0.5s;
+  text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #38D959, 0 0 40px #38D959, 0 0 50px #38D959, 0 0 60px #38D959, 0 0 70px #38D959;
 }
 
-.box-participant:hover .info-participant-prize h5 {
+.box-participant:hover .info-participant-prize 
+{
+  transition: 0.2s;
+}
+
+.box-participant:hover .info-participant-prize h5 
+{
   font-size: 1.4rem;
   transition: 0.5s;
+  text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #38D959, 0 0 40px #38D959, 0 0 50px #38D959, 0 0 60px #38D959, 0 0 70px #38D959;
 }
 
 .box-participant:hover .box-participant-shine 
