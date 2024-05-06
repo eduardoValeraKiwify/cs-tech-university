@@ -318,14 +318,8 @@ button:focus-visible {
   z-index: 1;
 }
 
-.box-participant:active .box-participant-shine
-{
-  opacity: 0;
-}
-
 .box-participant-shine 
 {
-  content: "";
   position: absolute;
   top: -500%;
   left: -210%;
@@ -342,6 +336,7 @@ button:focus-visible {
     rgba(255, 255, 255, 0.5) 92%,
     rgba(255, 255, 255, 0.0) 100%
   );
+  transition: 0.5s all ease-in-out;
 }
 
 .team .member .member-info-content
