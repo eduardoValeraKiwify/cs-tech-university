@@ -221,9 +221,9 @@ button:focus-visible {
 
 .info-participant-name 
 {
-  width: 200px;
-  padding-left: 25px;
+  width: 250px;
   position: relative;
+  text-align: center;
 }
 
 .info-participant-name h5 
@@ -231,7 +231,7 @@ button:focus-visible {
   
 }
 
-.info-participant-name::before, .info-participant-prize::before 
+.info-participant-name::before, .info-participant-score::before 
 {
   content: "";
   position: absolute;
@@ -256,14 +256,14 @@ button:focus-visible {
   font-size: 0.8rem;
 }
 
-.info-participant-prize 
+.info-participant-score 
 {
   width: 200px;
-  padding-left: 25px;
   position: relative;
+  text-align: center;
 }
 
-.info-participant-prize span 
+.info-participant-score span 
 {
   color: var(--accent-color);
 }
@@ -271,7 +271,8 @@ button:focus-visible {
 .box-participant:hover::after 
 {
   transition: 0.5s;
-  border: none;
+  border: 8px solid #fff;
+  border-radius: 20px;
   inset: 0;
 }
 
@@ -283,9 +284,13 @@ button:focus-visible {
 
 .box-participant:hover .info-participant-name
 {
-  padding-left: 16px;
   transition: 0.5s;
   /* text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #38D959, 0 0 40px #38D959, 0 0 50px #38D959, 0 0 60px #38D959, 0 0 70px #38D959; */
+}
+
+.box-participant .info-participant-name h5 
+{
+  transition: 0.5s;
 }
 
 .box-participant:hover .info-participant-name h5 
@@ -295,16 +300,44 @@ button:focus-visible {
   text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #38D959, 0 0 40px #38D959, 0 0 50px #38D959, 0 0 60px #38D959, 0 0 70px #38D959;
 }
 
-.box-participant:hover .info-participant-prize 
+.box-participant .info-participant-name span 
 {
-  transition: 0.2s;
+  transition: 0.5s;
 }
 
-.box-participant:hover .info-participant-prize h5 
+.box-participant:hover .info-participant-name span 
+{
+  transition: 0.5s;
+  text-shadow: 0 0 10px #38D959, 0 0 20px #38D959, 0 0 30px #fff, 0 0 40px #fff, 0 0 50px #fff, 0 0 60px #fff, 0 0 70px #fff;
+}
+
+.box-participant:hover .info-participant-score 
+{
+  transition: 0.2s;
+  text-align: center;
+}
+
+.box-participant .info-participant-score h5 
+{
+  transition: 0.5s;
+}
+
+.box-participant:hover .info-participant-score h5 
 {
   font-size: 1.4rem;
   transition: 0.5s;
   text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #38D959, 0 0 40px #38D959, 0 0 50px #38D959, 0 0 60px #38D959, 0 0 70px #38D959;
+}
+
+.box-participant .info-participant-score span 
+{
+  transition: 0.5s;
+}
+
+.box-participant:hover .info-participant-score span 
+{
+  transition: 0.5s;
+  text-shadow: 0 0 10px #38D959, 0 0 20px #38D959, 0 0 30px #fff, 0 0 40px #fff, 0 0 50px #fff, 0 0 60px #fff, 0 0 70px #fff;
 }
 
 .box-participant:hover .box-participant-shine 
@@ -339,9 +372,94 @@ button:focus-visible {
   transition: 0.5s all ease-in-out;
 }
 
-.team .member .member-info-content
+/* @property --a 
 {
-  left: 0;
+  syntax: '<angle>';
+  inherits: false;
+  initial-value: 0deg;
+} */
+
+.box-member 
+{
+  position: relative;
+  padding: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: repeating-conic-gradient(from 0deg, #3AAD6E 5%, #3AAD6E 20%, transparent 0%, transparent 55%);
+  /* background: repeating-conic-gradient(from var(--a), #3AAD6E 0%, #3AAD6E 5%, transparent 5%, transparent 40%, #3AAD6E 50%); */
+  min-height: 306px;
+  border-radius: 10px;
+  /* animation: rotating 7s linear infinite; */
+  /* animation-play-state: paused; */
+}
+
+/* @keyframes rotating 
+{
+  0% 
+  {
+    --a: 0deg;
+  }
+  100% 
+  {
+    --a: 360deg;
+  }
+} */
+
+.box-member::before 
+{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: repeating-conic-gradient(from 90deg, #3AAD6E 5%, #3AAD6E 20%, transparent 0%, transparent 55%);
+  /* background: repeating-conic-gradient(from var(--a), #3AAD6E 0%, #3AAD6E 5%, transparent 5%, transparent 40%, #3AAD6E 50%); */
+  border-radius: 10px;
+  /* animation: rotating 7s linear infinite; */
+  /* animation-delay: -1s; */
+  /* animation-play-state: paused; */
+}
+
+.box-member:hover,
+.box-member:hover::before 
+{
+  animation-play-state: running;
+}
+
+.box-member::after 
+{
+  content: '';
+  position: absolute;
+  inset: 4px;
+  border: 10px solid #000;
+  background: #000;
+  border-radius: 5px;
+  transition: 0.6s;
+}
+
+.box-member .info-member 
+{
+  position: absolute;
+  z-index: 1;
+  inset: 10px;
+  border-radius: 5px;
+  transition: 0.6s;
+}
+
+.box-member:hover::after 
+{
+  /* inset: 0;
+  border: 5px solid #FFF;
+  border-radius: 10px;
+  transition: 0.6s; */
+}
+
+.box-member:hover .info-member 
+{
+  inset: 0;
+  border-radius: 10px;
+  border: 5px solid #FFF;
+  transition: inset 0.6s;
 }
 
 @media only screen and (max-width : 991px) 
@@ -356,7 +474,7 @@ button:focus-visible {
     padding: 0;
   }
 
-  .info-participant-name::before, .info-participant-prize::before
+  .info-participant-name::before, .info-participant-score::before
   {
     display: none;
   }
@@ -376,7 +494,7 @@ button:focus-visible {
     margin-top: 15px;
   }
 
-  .info-participant-prize
+  .info-participant-score
   {
     width: 100%;
     padding: 0;

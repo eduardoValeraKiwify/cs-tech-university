@@ -4,17 +4,13 @@ async function fetchTeamDataFromAPIEndpoint() {
     const cards = await fetch('/api/fetchTeamNotion').then((res) => res.json().then((data) => data.results))
 
     document.querySelector("#equipe-tech").innerHTML = cards.map((card) => `
-    <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-              <div class="member">
-                <img src="${card.properties.Imagem.rich_text[0].plain_text}" class="img-fluid" alt="">
-                <div class="member-info">
-                  <div class="member-info-content">
-                    <h4>${card.properties.Name.title[0].plain_text}</h4>
-                    <span>${card.properties.Descricao.rich_text[0].plain_text}</span>
-                  </div>
-                </div>
-              </div>
-            </div><!-- End Team Member -->
+      <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+        <div class="box-member">
+          <div class="info-member" style="background-image: url(${card.properties.Imagem.rich_text.length > 0 ? card.properties.Imagem.rich_text[0].plain_text : '/assets/img/kiwify-logo.jpg'}); background-repeat: no-repeat; background-size: cover;">
+          
+          </div>
+        </div>
+      </div><!-- End Team Member -->
     `).join('')
 }
 
@@ -41,10 +37,11 @@ async function fetchRankingDataFromAPIEndpoint() {
             <h5>${participant.properties.Nome.title[0].plain_text}</h5>
             <span>${participant.properties.Cargo.select.name}</span>
           </div>
-          <div class="info-participant-prize">
+          <div class="info-participant-score">
             <h5>Pontuação</h5>
             <span>${participant.properties['Nota Final Total'].formula.number}</span>
           </div>
+          
         </div>
         <div class="box-participant-shine"></div>
       </div>
