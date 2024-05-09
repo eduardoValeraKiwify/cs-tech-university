@@ -126,57 +126,27 @@
       </section><!-- /About Section -->
   
 
-      <!-- Início Atividades -->
-      <section id="tabs" class="services section">
-        <div class="tabs">
-          <input type="radio" class="tabs-radio" name="tabs-atividades" id="atividade-1" checked>
-          <label for="atividade-1" class="tabs-label">API King</label>
-          <div class="tabs-content">
-            <div class="alinhamento">
-              <img src="/public/assets/img/atividades/atividade1.jpg" alt="">
-              <h3>API King</h3>
-              <p>Aqui entra um exemplo de descrição sobre a atividade que será realizada pela equipe. Dando detalhes sobre o processo e seu funcionamento! </p>
-              <a href="https://docs.google.com/forms/d/e/1FAIpQLSfaZP7_5DL24h3ufDzex5PZFSmxG2vf9GMxq0JbYxAq_biqwQ/viewform" target="_blank" class="atividade-button">Clique aqui para realizar a atividade!</a>
-            </div>
-          </div>
+            <!-- Início Atividades -->
+            <section id="atividades-section" class="services section">
+              <div class="informacoes-atv">
+                <h3>Conheça sua próximas missões</h3>
+                <p>
+                  Essas são suas próximas missões, foque em obter a maior quantidade de experiência, 
+                  chegar no nível máximo e mostrar do que é capaz! Torne-se um exemplo e conquiste seu lugar
+                  no topo dessa competição, exibindo seus conhecimentos!
+                </p>
+                <div class="atv-buttons">
 
-          <input type="radio" class="tabs-radio" name="tabs-atividades" id="atividade-2">
-          <label for="atividade-2" class="tabs-label">Devtools Detective</label>
-          <div class="tabs-content">
-            <div class="alinhamento">
-              <img src="public/assets/img/atividades/atividade2.jpg" alt="">
-              <div class="ani-test">
-              <h3>Devtools Detective</h3>
+                  <button class="atv-btn atv-4" onclick="menuToggle4()">Webhook Wizard</button>
+                  <button class="atv-btn atv-3" onclick="menuToggle3()">Page Artist</button>
+                  <button class="atv-btn atv-2" onclick="menuToggle2()">Devtools Detective</button>
+                  <button class="atv-btn atv-1" onclick="menuToggle1()">API King</button>
+
+                </div>
               </div>
-              <p>Aqui entra um exemplo de descrição sobre a atividade que será realizada pela equipe. Dando detalhes sobre o processo e seu funcionamento! </p>
-              <a href="https://docs.google.com/forms/d/e/1FAIpQLSfaZP7_5DL24h3ufDzex5PZFSmxG2vf9GMxq0JbYxAq_biqwQ/viewform" target="_blank" class="atividade-button">Clique aqui para realizar a atividade!</a>
-            </div>
-          </div>
-
-          <input type="radio" class="tabs-radio" name="tabs-atividades" id="atividade-3">
-          <label for="atividade-3" class="tabs-label">Page Artist</label>
-          <div class="tabs-content">
-            <div class="alinhamento">
-              <img src="public/assets/img/atividades/atividade3.jpg" alt="">
-              <h3>Page Artist</h3>
-              <p>Aqui entra um exemplo de descrição sobre a atividade que será realizada pela equipe. Dando detalhes sobre o processo e seu funcionamento! </p>
-              <a href="https://docs.google.com/forms/d/e/1FAIpQLSfaZP7_5DL24h3ufDzex5PZFSmxG2vf9GMxq0JbYxAq_biqwQ/viewform" target="_blank" class="atividade-button">Clique aqui para realizar a atividade!</a>
-            </div>
-          </div>
-
-          <input type="radio" class="tabs-radio" name="tabs-atividades" id="atividade-4">
-          <label for="atividade-4" class="tabs-label">Webhook Wizard</label>
-          <div class="tabs-content">
-            <div class="alinhamento">
-              <img src="public/assets/img/atividades/atividade4.jpg" alt="">
-              <h3>Webhook Wizard</h3>
-              <p>Aqui entra um exemplo de descrição sobre a atividade que será realizada pela equipe. Dando detalhes sobre o processo e seu funcionamento! </p>
-              <a href="https://docs.google.com/forms/d/e/1FAIpQLSfaZP7_5DL24h3ufDzex5PZFSmxG2vf9GMxq0JbYxAq_biqwQ/viewform" target="_blank" class="atividade-button">Clique aqui para realizar a atividade!</a>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- Fim Atividades -->
+      
+            </section>
+            <!-- Fim Atividades -->
   
       <!-- Portfolio Section -->
       <section id="portfolio" class="portfolio section">
@@ -259,6 +229,118 @@
       </div>
   
     </footer>
+
+        <!-- Overlay atividade 1 -->
+        <div id="overlay-atv1">
+          <div id="toggleIcon1" onclick="menuToggle1()">
+            <div class="close-btn bi bi-x-square"></div>
+          </div>
+          <div class="container-atividade">
+            <div class="row">
+              <div class="img-title col-sm">
+                <h3>The Great King Challenge 👑</h3>
+                <img src="public/assets/img/atividades/atividade1.jpg" alt="">
+              </div>
+              <div class="descricao-atividade col-sm">
+                <p>Seja bem-vindo à batalha final na CS Tech University, onde o último território aguarda a conquista pelo seu império!</p>
+                <p>Nesta fase decisiva, é hora de demonstrar toda a sua bravura e preparar seu exército para uma missão crucial: criar uma requisição utilizando nossa poderosa API.</p>
+                <p>Seu objetivo é forjar uma integração imbatível, mostrando que possui o poder necessário para superar seus inimigos. Apenas enviar uma requisição pelo Postman é suficiente, mas não seria capaz de demonstrar sua verdadeira grandeza, não é mesmo?</p>
+                <p>Mostre ao mundo que você não apenas domina as técnicas de guerra digital, mas também é capaz de liderar com maestria seu exército tecnológico. Erga sua bandeira e prepare-se para comandar sua tropa digital com destreza e determinação, conquistando mais um território em nome do seu glorioso império!</p>
+              </div>
+              <div class="prazos col-sm">
+                <h3>Período da atividade</h3>
+                <p>Inicio: 06/06</p>
+                <p>Final: 09/06</p>
+                <button>Clique aqui para começar a missão</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Fim Overlay atividade 1 -->
+    
+        <!-- Overlay atividade 2 -->
+        <div id="overlay-atv2">
+          <div id="toggleIcon2" onclick="menuToggle2()">
+            <div class="close-btn bi bi-x-square"></div>
+          </div>
+          <div class="container-atividade">
+            <div class="row">
+              <div class="img-title col-sm align-center">
+                <h3>Practice your investigative skills 🕵️</h3>
+                <img src="public/assets/img/atividades/atividade2.jpg" alt="">
+              </div>
+              <div class="descricao-atividade col-sm">
+                <p>Ei, detetive! Está pronto para uma missão emocionante?</p>
+                <p>Prepare-se para desvendar os mistérios escondidos dentro da Kiwify! Nesse desafio, você será o mestre dos disfarces, capaz de descobrir informações como a data da última mudança do CNPJ, o ID secreto de uma store diretamente pelo marketplace e até mesmo o valor atual na conta marcada com o status "Refund_requested".</p>
+                <p>Então, pegue seu chapéu de investigador e afie suas habilidades de dedução! Estamos prestes a embarcar em uma aventura pelo mundo dos segredos digitais.</p>
+                <p>Vamos lá, detetive, o mistério nos espera!</p>
+              </div>
+              <div class="prazos col-sm">
+                <h3>Período da atividade</h3>
+                <p>Inicio: 03/06</p>
+                <p>Final: 05/06</p>
+                <button>Clique aqui para começar a missão</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Fim Overlay atividade 2 -->
+    
+        <!-- Overlay atividade 3 -->
+        <div id="overlay-atv3">
+          <div id="toggleIcon3" onclick="menuToggle3()">
+            <div class="close-btn bi bi-x-square"></div>
+          </div>
+          <div class="container-atividade">
+            <div class="row">
+              <div class="img-title col-sm align-center">
+                <h3>The Artist Challenge 🧑‍🎨</h3>
+                <img src="public/assets/img/atividades/atividade3.jpg" alt="">
+              </div>
+              <div class="descricao-atividade col-sm">
+                <p>Hora de soltar a criatividade e transformar esse desafio em uma obra-prima! Imagino que você já esteja vestindo sua melhor jardineira e colocou todos os pincéis no bolso!</p>
+                <p>Como verdadeiros artistas, vocês têm o desafio de criar uma Landing Page temática, inspirada no tema dos seus produtos, e depois dar vida a uma página de Upsell para outro item. Pinte o mundo com sua criatividade! </p>
+                <p>Você deverá criar um vídeo mostrando o funcionamento da sua página de vendas, levando até o checkout do seu produto. Após a compra, o desafio é garantir que seja encaminhado para a página de Upsell, com todo o fluxo funcionando perfeitamente! Lembrando que o design criado em sua Landing Page e Página de Upsell também serão levados em conta!</p>
+                <p>E aí, qual ferramenta irá utilizar? Aqui estão algumas sugestões, mas fique à vontade para escolher a sua preferida. Afinal, a arte é sua e a escolha também!</p>
+              </div>
+              <div class="prazos col-sm">
+                <h3>Período da atividade</h3>
+                <p>Inicio: 30/05</p>
+                <p>Final: 02/06</p>
+                <button>Clique aqui para começar a missão</button>
+              </div>
+            </div>
+          </div>
+        </div>
+         <!-- Fim Overlay atividade 3 -->
+    
+             <!-- Overlay atividade 4 -->
+        <div id="overlay-atv4">
+          <div id="toggleIcon4" onclick="menuToggle4()">
+            <div class="close-btn bi bi-x-square"></div>
+          </div>
+          <div class="container-atividade">
+            <div class="row">
+              <div class="img-title col-sm align-center">
+                <h3>The Wise Wizard Challenge 🧙‍♂️</h3>
+                <img src="public/assets/img/atividades/atividade4.jpg" alt="">
+              </div>
+              <div class="descricao-atividade col-sm">
+                <p>Chegou a hora de mostrar seus poderes mágicos como o "Guardião das Integrações"! Não se limite ao script padrão, mergulhe na jornada da magia da integração usando sua criatividade para se tornar um verdadeiro mago dos webhooks.</p>
+                <p>Imagine-se como um mago habilidoso, usando seus encantos para conjurar uma integração perfeita. Mas lembre-se, a magia está na sua capacidade de ser criativo e explorar novos caminhos! A plataforma Make será sua varinha mágica, oferecendo inúmeras opções para testes gratuitos. É como entrar em uma loja de poções, onde cada frasco guarda uma nova possibilidade de integrar e conectar!</p>
+                <p>Se sentir perdido, não tema! Você pode seguir o caminho traçado no vídeo, mas lembre-se, a verdadeira magia está na originalidade e na habilidade de reinventar. Transforme o cenário, mude o script e surpreenda a todos com sua inovação!</p>
+                <p>Então, prepare-se para sua jornada como o mestre das integrações! Mostre ao mundo a magia dos webhooks em um vídeo repleto de encantamento, curiosidades e qualidade. Estou certo de que você tem tudo o que é preciso para brilhar nessa aventura mágica! </p>
+              </div>
+              <div class="prazos col-sm">
+                <h3>Período da atividade</h3>
+                <p>Inicio: 27/05</p>
+                <p>Final: 29/05</p>
+                <button>Clique aqui para começar a missão</button>
+              </div>
+            </div>
+          </div>
+        </div>
+         <!-- Fim Overlay atividade 4 -->
   
     <!-- Scroll Top -->
     <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
@@ -274,6 +356,7 @@
     <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
     <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
     <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="/functions/menuToggle.js"></script>
   
     <!-- Main JS File -->
     <script src="assets/js/main.js"></script>
