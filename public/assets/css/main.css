@@ -642,7 +642,7 @@ h6 {
   opacity: 0;
   right: 15px;
   bottom: 15px;
-  z-index: 99999;
+  z-index: 1021;
   background-color: var(--accent-color);
   width: 40px;
   height: 40px;
@@ -1636,7 +1636,13 @@ section,
   background: #38d959;
 }
 
-
+#overlay-atv1 .container-atividade .row,
+#overlay-atv2 .container-atividade .row,
+#overlay-atv3 .container-atividade .row,
+#overlay-atv4 .container-atividade .row 
+{
+  margin: 0;
+}
 
 .img-title {
   display: flex;
@@ -1647,10 +1653,17 @@ section,
 }
 
 .img-title h3 {
-  font-size: 25px;
+  position: relative;
+    padding-top: 20px;
+    left: 25px;
+    font-size: 3.2rem;
+    font-weight: bolder;
+    text-transform: uppercase;
+    width: 460px;
 }
 
 .img-title img {
+  margin-top: 20px;
   border-radius: 15px;
   height: 400px;
   width: 400px;
@@ -1663,29 +1676,70 @@ section,
   align-items: left;
   justify-content: top;
   padding: 50px;
-  border-right: 2px solid;
-  border-left: 2px solid;
+  position: relative;
+  /* border-right: 2px solid;
+  border-left: 2px solid; */
+}
+
+.descricao-atividade::before {
+  content: "";
+  position: absolute;
+  left: 1px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  height: 600px;
+  width: 2px;
+  background: #FFF;
+  /* background: radial-gradient(circle, #FFF 0%, transparent 100%); */
+  opacity: 0.18;
+}
+
+.descricao-atividade::after {
+  content: "";
+  position: absolute;
+  right: 1px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  height: 600px;
+  width: 2px;
+  background: #FFF;
+  /* background: radial-gradient(circle, #FFF 0%, transparent 100%); */
+  opacity: 0.18;
 }
 
 .prazos {
   padding-top: 50px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: top;
 }
 
 .prazos h3 {
   font-size: 25px;
+  padding-left: 20px;
+  padding-top: 20px;
+  text-transform: uppercase;
+  font-weight: bold;
 }
 
 .prazos p {
   font-size: 16px;
+  padding-left: 20px;
 }
 
 .prazos button{
   color: #ffffff;
   margin-top: 25px;
+  margin-left: 20px;
   background-color: #38d959;
   border: 2px;
   border-radius: 15px;
@@ -1707,6 +1761,7 @@ section,
   overflow-y: auto;
   transform: scale(0);
   transition: 0.5s;
+  z-index: 1022;
 }
 
 #overlay-atv1.active {
@@ -1720,7 +1775,7 @@ section,
 
 #toggleIcon1 {
   position: fixed;
-  top: 100px;
+  top: 25px;
   right: 20px;
   width: 35px;
   height: 35px;
@@ -1743,6 +1798,7 @@ section,
   overflow-y: auto;
   transform: scale(0);
   transition: 0.5s;
+  z-index: 1022;
 }
 
 #overlay-atv2.active {
@@ -1756,7 +1812,7 @@ section,
 
 #toggleIcon2 {
   position: fixed;
-  top: 100px;
+  top: 25px;
   right: 20px;
   width: 35px;
   height: 35px;
@@ -1779,6 +1835,7 @@ section,
   overflow-y: auto;
   transform: scale(0);
   transition: 0.5s;
+  z-index: 1022;
 }
 
 #overlay-atv3.active {
@@ -1792,7 +1849,7 @@ section,
 
 #toggleIcon3 {
   position: fixed;
-  top: 100px;
+  top: 25px;
   right: 20px;
   width: 35px;
   height: 35px;
@@ -1815,6 +1872,7 @@ section,
   overflow-y: auto;
   transform: scale(0);
   transition: 0.5s;
+  z-index: 1022;
 }
 
 #overlay-atv4.active {
@@ -1828,7 +1886,7 @@ section,
 
 #toggleIcon4 {
   position: fixed;
-  top: 100px;
+  top: 25px;
   right: 20px;
   width: 35px;
   height: 35px;

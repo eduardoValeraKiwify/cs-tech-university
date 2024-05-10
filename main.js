@@ -7,7 +7,9 @@ async function fetchTeamDataFromAPIEndpoint() {
       <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
         <div class="box-member">
           <div class="info-member" style="background-image: url(${card.properties.Imagem.rich_text.length > 0 ? card.properties.Imagem.rich_text[0].plain_text : '/assets/img/kiwify-logo.jpg'}); background-repeat: no-repeat; background-size: cover;">
-          
+            <div class="info-member-name">
+              <h5>${card.properties.Name.title[0].plain_text}</h5>
+            </div>
           </div>
         </div>
       </div><!-- End Team Member -->
