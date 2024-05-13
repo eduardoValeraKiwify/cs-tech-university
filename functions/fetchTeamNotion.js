@@ -16,7 +16,7 @@ export const handler = async (event, context) => {
             filter: {
                 property: "Status",
                 select: {
-                    equals: "Participantes"
+                    equals: "Ativo"
                 }
             },
             sorts: [

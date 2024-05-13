@@ -20,9 +20,9 @@
     <link href="/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <!-- <link href="https://fonts.googleapis.com" rel="preconnect">
     <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"> -->
 
     <!-- Vendor CSS Files -->
     <link href="/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -128,6 +128,18 @@
 
             <!-- Início Atividades -->
             <section id="atividades-section" class="services section">
+              <!-- <div class="container">
+                <div class="row gy-3">
+                  <div class="section-title">
+                    <h2>Conheça sua próximas missões</h3>
+                    <p>
+                      Essas são suas próximas missões, foque em obter a maior quantidade de experiência, 
+                      chegar no nível máximo e mostrar do que é capaz! Torne-se um exemplo e conquiste seu lugar
+                      no topo dessa competição, exibindo seus conhecimentos!
+                    </p>
+                  </div>
+                </div>
+              </div> -->
               <div class="informacoes-atv">
                 <h3>Conheça sua próximas missões</h3>
                 <p>
@@ -144,7 +156,6 @@
 
                 </div>
               </div>
-      
             </section>
             <!-- Fim Atividades -->
   
@@ -229,91 +240,90 @@
       </div>
   
     </footer>
+    <!-- Overlay atividade 1 -->
+    <div id="overlay-atv1">
+      <div id="toggleIcon1" onclick="menuToggle1()">
+        <div class="close-btn bi bi-x-square"></div>
+      </div>
+      <div class="container-atividade">
+        <div class="row">
+          <div class="img-title col-sm">
+            <img src="public/assets/img/atividades/atividade1.jpg" alt="">
+            <h3>The Great King Challenge 👑</h3>
+          </div>
+          <div class="descricao-atividade col-sm">
+            <p>Seja bem-vindo à batalha final na CS Tech University, onde o último território aguarda a conquista pelo seu império!</p>
+            <p>Nesta fase decisiva, é hora de demonstrar toda a sua bravura e preparar seu exército para uma missão crucial: criar uma requisição utilizando nossa poderosa API.</p>
+            <p>Seu objetivo é forjar uma integração imbatível, mostrando que possui o poder necessário para superar seus inimigos. Apenas enviar uma requisição pelo Postman é suficiente, mas não seria capaz de demonstrar sua verdadeira grandeza, não é mesmo?</p>
+            <p>Mostre ao mundo que você não apenas domina as técnicas de guerra digital, mas também é capaz de liderar com maestria seu exército tecnológico. Erga sua bandeira e prepare-se para comandar sua tropa digital com destreza e determinação, conquistando mais um território em nome do seu glorioso império!</p>
+          </div>
+          <div class="prazos col-sm">
+            <h3>Período da atividade</h3>
+            <p>Inicio: 06/06</p>
+            <p>Final: 09/06</p>
+            <button>Clique aqui para começar a missão</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Fim Overlay atividade 1 -->
 
-        <!-- Overlay atividade 1 -->
-        <div id="overlay-atv1">
-          <div id="toggleIcon1" onclick="menuToggle1()">
-            <div class="close-btn bi bi-x-square"></div>
+    <!-- Overlay atividade 2 -->
+    <div id="overlay-atv2">
+      <div id="toggleIcon2" onclick="menuToggle2()">
+        <div class="close-btn bi bi-x-square"></div>
+      </div>
+      <div class="container-atividade">
+        <div class="row">
+          <div class="img-title col-sm align-center">
+            <img src="public/assets/img/atividades/atividade2.jpg" alt="">
+            <h3>Practice your investigative skills 🕵️</h3>
           </div>
-          <div class="container-atividade">
-            <div class="row">
-              <div class="img-title col-sm">
-                <img src="public/assets/img/atividades/atividade1.jpg" alt="">
-                <h3>The Great King Challenge 👑</h3>
-              </div>
-              <div class="descricao-atividade col-sm">
-                <p>Seja bem-vindo à batalha final na CS Tech University, onde o último território aguarda a conquista pelo seu império!</p>
-                <p>Nesta fase decisiva, é hora de demonstrar toda a sua bravura e preparar seu exército para uma missão crucial: criar uma requisição utilizando nossa poderosa API.</p>
-                <p>Seu objetivo é forjar uma integração imbatível, mostrando que possui o poder necessário para superar seus inimigos. Apenas enviar uma requisição pelo Postman é suficiente, mas não seria capaz de demonstrar sua verdadeira grandeza, não é mesmo?</p>
-                <p>Mostre ao mundo que você não apenas domina as técnicas de guerra digital, mas também é capaz de liderar com maestria seu exército tecnológico. Erga sua bandeira e prepare-se para comandar sua tropa digital com destreza e determinação, conquistando mais um território em nome do seu glorioso império!</p>
-              </div>
-              <div class="prazos col-sm">
-                <h3>Período da atividade</h3>
-                <p>Inicio: 06/06</p>
-                <p>Final: 09/06</p>
-                <button>Clique aqui para começar a missão</button>
-              </div>
-            </div>
+          <div class="descricao-atividade col-sm">
+            <p>Ei, detetive! Está pronto para uma missão emocionante?</p>
+            <p>Prepare-se para desvendar os mistérios escondidos dentro da Kiwify! Nesse desafio, você será o mestre dos disfarces, capaz de descobrir informações como a data da última mudança do CNPJ, o ID secreto de uma store diretamente pelo marketplace e até mesmo o valor atual na conta marcada com o status "Refund_requested".</p>
+            <p>Então, pegue seu chapéu de investigador e afie suas habilidades de dedução! Estamos prestes a embarcar em uma aventura pelo mundo dos segredos digitais.</p>
+            <p>Vamos lá, detetive, o mistério nos espera!</p>
+          </div>
+          <div class="prazos col-sm">
+            <h3>Período da atividade</h3>
+            <p>Inicio: 03/06</p>
+            <p>Final: 05/06</p>
+            <button>Clique aqui para começar a missão</button>
           </div>
         </div>
-        <!-- Fim Overlay atividade 1 -->
-    
-        <!-- Overlay atividade 2 -->
-        <div id="overlay-atv2">
-          <div id="toggleIcon2" onclick="menuToggle2()">
-            <div class="close-btn bi bi-x-square"></div>
+      </div>
+    </div>
+    <!-- Fim Overlay atividade 2 -->
+
+    <!-- Overlay atividade 3 -->
+    <div id="overlay-atv3">
+      <div id="toggleIcon3" onclick="menuToggle3()">
+        <div class="close-btn bi bi-x-square"></div>
+      </div>
+      <div class="container-atividade">
+        <div class="row">
+          <div class="img-title col-sm align-center">
+            <img src="public/assets/img/atividades/atividade3.jpg" alt="">
+            <h3>The Artist Challenge 🧑‍🎨</h3>
           </div>
-          <div class="container-atividade">
-            <div class="row">
-              <div class="img-title col-sm align-center">
-                <img src="public/assets/img/atividades/atividade2.jpg" alt="">
-                <h3>Practice your investigative skills 🕵️</h3>
-              </div>
-              <div class="descricao-atividade col-sm">
-                <p>Ei, detetive! Está pronto para uma missão emocionante?</p>
-                <p>Prepare-se para desvendar os mistérios escondidos dentro da Kiwify! Nesse desafio, você será o mestre dos disfarces, capaz de descobrir informações como a data da última mudança do CNPJ, o ID secreto de uma store diretamente pelo marketplace e até mesmo o valor atual na conta marcada com o status "Refund_requested".</p>
-                <p>Então, pegue seu chapéu de investigador e afie suas habilidades de dedução! Estamos prestes a embarcar em uma aventura pelo mundo dos segredos digitais.</p>
-                <p>Vamos lá, detetive, o mistério nos espera!</p>
-              </div>
-              <div class="prazos col-sm">
-                <h3>Período da atividade</h3>
-                <p>Inicio: 03/06</p>
-                <p>Final: 05/06</p>
-                <button>Clique aqui para começar a missão</button>
-              </div>
-            </div>
+          <div class="descricao-atividade col-sm">
+            <p>Hora de soltar a criatividade e transformar esse desafio em uma obra-prima! Imagino que você já esteja vestindo sua melhor jardineira e colocou todos os pincéis no bolso!</p>
+            <p>Como verdadeiros artistas, vocês têm o desafio de criar uma Landing Page temática, inspirada no tema dos seus produtos, e depois dar vida a uma página de Upsell para outro item. Pinte o mundo com sua criatividade! </p>
+            <p>Você deverá criar um vídeo mostrando o funcionamento da sua página de vendas, levando até o checkout do seu produto. Após a compra, o desafio é garantir que seja encaminhado para a página de Upsell, com todo o fluxo funcionando perfeitamente! Lembrando que o design criado em sua Landing Page e Página de Upsell também serão levados em conta!</p>
+            <p>E aí, qual ferramenta irá utilizar? Aqui estão algumas sugestões, mas fique à vontade para escolher a sua preferida. Afinal, a arte é sua e a escolha também!</p>
           </div>
-        </div>
-        <!-- Fim Overlay atividade 2 -->
-    
-        <!-- Overlay atividade 3 -->
-        <div id="overlay-atv3">
-          <div id="toggleIcon3" onclick="menuToggle3()">
-            <div class="close-btn bi bi-x-square"></div>
-          </div>
-          <div class="container-atividade">
-            <div class="row">
-              <div class="img-title col-sm align-center">
-                <img src="public/assets/img/atividades/atividade3.jpg" alt="">
-                <h3>The Artist Challenge 🧑‍🎨</h3>
-              </div>
-              <div class="descricao-atividade col-sm">
-                <p>Hora de soltar a criatividade e transformar esse desafio em uma obra-prima! Imagino que você já esteja vestindo sua melhor jardineira e colocou todos os pincéis no bolso!</p>
-                <p>Como verdadeiros artistas, vocês têm o desafio de criar uma Landing Page temática, inspirada no tema dos seus produtos, e depois dar vida a uma página de Upsell para outro item. Pinte o mundo com sua criatividade! </p>
-                <p>Você deverá criar um vídeo mostrando o funcionamento da sua página de vendas, levando até o checkout do seu produto. Após a compra, o desafio é garantir que seja encaminhado para a página de Upsell, com todo o fluxo funcionando perfeitamente! Lembrando que o design criado em sua Landing Page e Página de Upsell também serão levados em conta!</p>
-                <p>E aí, qual ferramenta irá utilizar? Aqui estão algumas sugestões, mas fique à vontade para escolher a sua preferida. Afinal, a arte é sua e a escolha também!</p>
-              </div>
-              <div class="prazos col-sm">
-                <h3>Período da atividade</h3>
-                <p>Inicio: 30/05</p>
-                <p>Final: 02/06</p>
-                <button>Clique aqui para começar a missão</button>
-              </div>
-            </div>
+          <div class="prazos col-sm">
+            <h3>Período da atividade</h3>
+            <p>Inicio: 30/05</p>
+            <p>Final: 02/06</p>
+            <button>Clique aqui para começar a missão</button>
           </div>
         </div>
-         <!-- Fim Overlay atividade 3 -->
-    
+      </div>
+    </div>
+    <!-- Fim Overlay atividade 3 -->
+
              <!-- Overlay atividade 4 -->
         <div id="overlay-atv4">
           <div id="toggleIcon4" onclick="menuToggle4()">
@@ -333,8 +343,8 @@
               </div>
               <div class="prazos col-sm">
                 <h3>Período da atividade</h3>
-                <p>Inicio: 27/05</p>
-                <p>Final: 29/05</p>
+                <p><b>Início:</b> 27/05</p>
+                <p><b>Final:</b> 29/05</p>
                 <button>Clique aqui para começar a missão</button>
               </div>
             </div>

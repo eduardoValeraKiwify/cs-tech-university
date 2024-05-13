@@ -11,10 +11,28 @@
 # Help: https://bootstrapmade.com/color-system/
 --------------------------------------------------------------*/
 /* Fonts */
+
+@font-face {
+  font-family: 'Barlow';
+  font-style: normal;
+  font-weight: 900;
+  src: url(public/assets/fonts/Barlow/Barlow-ExtraBold.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  src: url(public/assets/fonts/Poppins/Poppins-Regular.ttf) format('truetype');
+}
+
 :root {
-  --default-font: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  /* --default-font: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --heading-font: "Raleway", sans-serif;
-  --nav-font: "Raleway", sans-serif;
+  --nav-font: "Raleway", sans-serif; */
+  --default-font: 'Poppins';
+  --heading-font: 'Barlow';
+  --nav-font: 'Barlow';
 }
 
 /* Global Colors */
@@ -25,7 +43,7 @@
   --default-color-rgb: 255, 255, 255;
   --heading-color: #ffffff;
   --heading-color-rgb: 255, 255, 255;
-  --accent-color: #38d959;
+  --accent-color: #3AAD6E;
   --accent-color-rgb: 56, 217, 89;
   --contrast-color: #ffffff;
   --contrast-color-rgb: 255, 255, 255;
@@ -34,7 +52,7 @@
 /* Nav Menu Colors */
 :root {
   --nav-color: #212529;
-  --nav-hover-color: #38d959;
+  --nav-hover-color: #3AAD6E;
   --nav-dropdown-color: #212529;
   --nav-dropdown-hover-color: #38d959;
   --nav-dropdown-background-color: #ffffff;
@@ -716,7 +734,7 @@ h6 {
 --------------------------------------------------------------*/
 section,
 .section {
-  color: var(--default-color);
+  color: rgb(var(--default-color-rgb));
   background-color: var(--background-color);
   padding: 60px 0;
   scroll-margin-top: 90px;
@@ -741,7 +759,7 @@ section,
 }
 
 .section-title h2 {
-  font-size: 32px;
+  /* font-size: 32px; */
   font-weight: 700;
   margin-bottom: 20px;
   padding-bottom: 20px;
@@ -1633,7 +1651,19 @@ section,
   border: 2px;
   border-radius: 15px;
   border-color: #000000;
-  background: #38d959;
+  background: #3AAD6E;
+}
+
+#overlay-atv1 .container-atividade, 
+#overlay-atv2 .container-atividade, 
+#overlay-atv3 .container-atividade, 
+#overlay-atv4 .container-atividade 
+{
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.95);
 }
 
 #overlay-atv1 .container-atividade .row,
@@ -1642,13 +1672,14 @@ section,
 #overlay-atv4 .container-atividade .row 
 {
   margin: 0;
+  height: 700px;
+  align-items: flex-start;
 }
 
 .img-title {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: top;
   padding: 50px;
 }
 
@@ -1656,7 +1687,7 @@ section,
   position: relative;
     padding-top: 20px;
     left: 25px;
-    font-size: 3.2rem;
+    font-size: 3.4rem;
     font-weight: bolder;
     text-transform: uppercase;
     width: 460px;
@@ -1671,14 +1702,11 @@ section,
 
 .descricao-atividade {
   display: flex;
-  height: 700px;
   flex-direction: column;
   align-items: left;
-  justify-content: top;
   padding: 50px;
   position: relative;
-  /* border-right: 2px solid;
-  border-left: 2px solid; */
+
 }
 
 .descricao-atividade::before {
@@ -1694,7 +1722,6 @@ section,
   height: 600px;
   width: 2px;
   background: #FFF;
-  /* background: radial-gradient(circle, #FFF 0%, transparent 100%); */
   opacity: 0.18;
 }
 
@@ -1711,49 +1738,53 @@ section,
   height: 600px;
   width: 2px;
   background: #FFF;
-  /* background: radial-gradient(circle, #FFF 0%, transparent 100%); */
   opacity: 0.18;
 }
 
 .prazos {
-  padding-top: 50px;
+  padding: 50px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: top;
 }
 
 .prazos h3 {
-  font-size: 25px;
-  padding-left: 20px;
   padding-top: 20px;
   text-transform: uppercase;
   font-weight: bold;
 }
 
 .prazos p {
-  font-size: 16px;
-  padding-left: 20px;
+  
 }
 
 .prazos button{
   color: #ffffff;
   margin-top: 25px;
-  margin-left: 20px;
-  background-color: #38d959;
+  background-color: #3AAD6E;
   border: 2px;
   border-radius: 15px;
   padding: 10px;
   width: 300px;
+  transition: 0.5s;
 }
 
-#overlay-atv1 {
+.prazos button:hover {
+  background-color: #1e643e;
+  transition: 0.5s;
+}
+
+#overlay-atv1, 
+#overlay-atv2, 
+#overlay-atv3, 
+#overlay-atv4 
+{
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: #000;
+  color: var(--contrast-color);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1764,135 +1795,73 @@ section,
   z-index: 1022;
 }
 
-#overlay-atv1.active {
-  transform: scale(1);
+#overlay-atv1 
+{
+  background: url('http://localhost:8888/public/assets/img/atividades/atividade1.jpg');
+  background-size: cover;
+  background-position: center;
 }
 
-#overlay-atv1 p {
-  margin-top: 20px;
-  color: #fff;
+#overlay-atv2 
+{
+  background: url('http://localhost:8888/public/assets/img/atividades/atividade2.jpg');
+  background-size: cover;
+  background-position: center;
 }
 
-#toggleIcon1 {
-  position: fixed;
-  top: 25px;
-  right: 20px;
-  width: 35px;
-  height: 35px;
-  background: #38d959;
-  z-index: 1;
-  cursor: pointer;
+#overlay-atv3 
+{
+  background: url('http://localhost:8888/public/assets/img/atividades/atividade3.jpg');
+  background-size: cover;
+  background-position: center;
 }
 
-#overlay-atv2 {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: #000;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  overflow-y: auto;
-  transform: scale(0);
-  transition: 0.5s;
-  z-index: 1022;
+#overlay-atv4 
+{
+  background: url('http://localhost:8888/public/assets/img/atividades/atividade4.jpg');
+  background-size: cover;
+  background-position: center;
 }
 
-#overlay-atv2.active {
-  transform: scale(1);
-}
-
-#overlay-atv2 p {
-  margin-top: 20px;
-  color: #fff;
-}
-
-#toggleIcon2 {
-  position: fixed;
-  top: 25px;
-  right: 20px;
-  width: 35px;
-  height: 35px;
-  background: #38d959;
-  z-index: 1;
-  cursor: pointer;
-}
-
-#overlay-atv3 {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: #000;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  overflow-y: auto;
-  transform: scale(0);
-  transition: 0.5s;
-  z-index: 1022;
-}
-
-#overlay-atv3.active {
-  transform: scale(1);
-}
-
-#overlay-atv3 p {
-  margin-top: 20px;
-  color: #fff;
-}
-
-#toggleIcon3 {
-  position: fixed;
-  top: 25px;
-  right: 20px;
-  width: 35px;
-  height: 35px;
-  background: #38d959;
-  z-index: 1;
-  cursor: pointer;
-}
-
-#overlay-atv4 {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: #000;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  overflow-y: auto;
-  transform: scale(0);
-  transition: 0.5s;
-  z-index: 1022;
-}
-
+#overlay-atv1.active, 
+#overlay-atv2.active, 
+#overlay-atv3.active, 
 #overlay-atv4.active {
   transform: scale(1);
 }
 
+#overlay-atv1 p, 
+#overlay-atv2 p, 
+#overlay-atv3 p, 
 #overlay-atv4 p {
   margin-top: 20px;
-  color: #fff;
 }
 
+#toggleIcon1, 
+#toggleIcon2, 
+#toggleIcon3, 
 #toggleIcon4 {
   position: fixed;
   top: 25px;
   right: 20px;
   width: 35px;
   height: 35px;
-  background: #38d959;
+  background: #3AAD6E;
+  color: var(--default-color);
   z-index: 1;
   cursor: pointer;
+  border-radius: 10px;
+  transition: 0.5s;
+}
+
+#toggleIcon1:hover, 
+#toggleIcon2:hover, 
+#toggleIcon3:hover, 
+#toggleIcon4:hover 
+{
+  background: #1e643e;
+  color: #bbbbbbdd;
+  transition: 0.5s;
 }
 
 .close-btn {

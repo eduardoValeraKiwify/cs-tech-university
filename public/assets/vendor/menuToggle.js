@@ -13,7 +13,8 @@ function menuToggle3(){
     nav.classList.toggle('active');
 }
 
-function menuToggle4(){
+async function menuToggle4(){
     var nav = document.getElementById('overlay-atv4');
     nav.classList.toggle('active');
+    // const cards = await fetch('/api/fetchTeamNotion').then((res) => res.json().then((data) => data.results))
 }

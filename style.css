@@ -1,7 +1,64 @@
+@font-face {
+  font-family: 'Barlow';
+  font-style: normal;
+  font-weight: 900;
+  src: url(public/assets/fonts/Barlow/Barlow-ExtraBold.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  src: url(public/assets/fonts/Poppins/Poppins-Regular.ttf) format('truetype');
+}
+
+/* body {
+  font-family: 'Poppins';
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Barlow';
+} */
+
 .portfolio .portfolio-content:hover img 
 {
   transform: none;
 }
+
+/*
+--------------------------------------------
+INICIO - CSS CONTAINER ATIVIDADES
+---------------------------------------------
+*/
+
+.box-atividades 
+{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.services .section-title {
+  color: var(--heading-color);
+}
+
+.box-atividades h2 
+{
+  
+}
+
+/*
+--------------------------------------------
+FIM - CSS CONTAINER ATIVIDADES
+---------------------------------------------
+*/
+
+/*
+--------------------------------------------
+INICIO - CSS CONTAINER RANKING
+---------------------------------------------
+*/
 
 .box-participant 
 {
@@ -107,9 +164,6 @@
   align-items: center;
   padding-left: 16px;
   text-transform: uppercase;
-  font-weight: bolder;
-  font-family: var(--heading-font);
-  /* text-shadow: 2px 4px #000000; */
 }
 
 .info-participant-thumb 
@@ -148,7 +202,6 @@
   height: 80px;
   width: 1px;
   background: #FFF;
-  /* background: radial-gradient(circle, #FFF 0%, transparent 100%); */
   opacity: 0.18;
   z-index: 1;
 }
@@ -188,7 +241,6 @@
 .box-participant:hover .info-participant-name
 {
   transition: 0.5s;
-  /* text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #38D959, 0 0 40px #38D959, 0 0 50px #38D959, 0 0 60px #38D959, 0 0 70px #38D959; */
 }
 
 .box-participant .info-participant-name h5 
@@ -200,7 +252,14 @@
 {
   font-size: 1.4rem;
   transition: 0.5s;
-  text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #38D959, 0 0 40px #38D959, 0 0 50px #38D959, 0 0 60px #38D959, 0 0 70px #38D959;
+  text-shadow: 
+  0 0 15px rgba(255, 255, 255, 0.5), 
+  0 0 25px rgba(255, 255, 255, 0.5), 
+  0 0 35px rgba(56, 217, 89, 0.5), 
+  0 0 45px rgba(56, 217, 89, 0.5), 
+  0 0 55px rgba(56, 217, 89, 0.5), 
+  0 0 65px rgba(56, 217, 89, 0.5), 
+  0 0 75px rgba(56, 217, 89, 0.5);
 }
 
 .box-participant .info-participant-name span 
@@ -211,7 +270,14 @@
 .box-participant:hover .info-participant-name span 
 {
   transition: 0.5s;
-  text-shadow: 0 0 10px #38D959, 0 0 20px #38D959, 0 0 30px #fff, 0 0 40px #fff, 0 0 50px #fff, 0 0 60px #fff, 0 0 70px #fff;
+  text-shadow: 
+  0 0 15px rgba(255, 255, 255, 0.5), 
+  0 0 25px rgba(255, 255, 255, 0.5), 
+  0 0 35px rgba(56, 217, 89, 0.5), 
+  0 0 45px rgba(56, 217, 89, 0.5), 
+  0 0 55px rgba(56, 217, 89, 0.5), 
+  0 0 65px rgba(56, 217, 89, 0.5), 
+  0 0 75px rgba(56, 217, 89, 0.5);
 }
 
 .box-participant:hover .info-participant-score 
@@ -229,7 +295,14 @@
 {
   font-size: 1.4rem;
   transition: 0.5s;
-  text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #38D959, 0 0 40px #38D959, 0 0 50px #38D959, 0 0 60px #38D959, 0 0 70px #38D959;
+  text-shadow: 
+  0 0 15px rgba(255, 255, 255, 0.5), 
+  0 0 25px rgba(255, 255, 255, 0.5), 
+  0 0 35px rgba(56, 217, 89, 0.5), 
+  0 0 45px rgba(56, 217, 89, 0.5), 
+  0 0 55px rgba(56, 217, 89, 0.5), 
+  0 0 65px rgba(56, 217, 89, 0.5), 
+  0 0 75px rgba(56, 217, 89, 0.5);
 }
 
 .box-participant .info-participant-score span 
@@ -240,7 +313,14 @@
 .box-participant:hover .info-participant-score span 
 {
   transition: 0.5s;
-  text-shadow: 0 0 10px #38D959, 0 0 20px #38D959, 0 0 30px #fff, 0 0 40px #fff, 0 0 50px #fff, 0 0 60px #fff, 0 0 70px #fff;
+  text-shadow: 
+  0 0 15px rgba(255, 255, 255, 0.5), 
+  0 0 25px rgba(255, 255, 255, 0.5), 
+  0 0 35px rgba(56, 217, 89, 0.5), 
+  0 0 45px rgba(56, 217, 89, 0.5), 
+  0 0 55px rgba(56, 217, 89, 0.5), 
+  0 0 65px rgba(56, 217, 89, 0.5), 
+  0 0 75px rgba(56, 217, 89, 0.5);
 }
 
 .box-participant:hover .box-participant-shine 
@@ -275,12 +355,21 @@
   transition: 0.5s all ease-in-out;
 }
 
-/* @property --a 
-{
-  syntax: '<angle>';
-  inherits: false;
-  initial-value: 0deg;
-} */
+/*
+--------------------------------------------
+FIM - CSS CONTAINER RANKING
+---------------------------------------------
+*/
+
+/*
+--------------------------------------------
+INICIO - CSS CONTAINER TIME TECH
+---------------------------------------------
+*/
+
+.team {
+  --background-color: rgba(var(--accent-color-rgb), 0.03);
+}
 
 .box-member 
 {
@@ -290,24 +379,9 @@
   justify-content: center;
   align-items: center;
   background: repeating-conic-gradient(from 0deg, #3AAD6E 5%, #3AAD6E 20%, transparent 0%, transparent 55%);
-  /* background: repeating-conic-gradient(from var(--a), #3AAD6E 0%, #3AAD6E 5%, transparent 5%, transparent 40%, #3AAD6E 50%); */
   min-height: 306px;
   border-radius: 10px;
-  /* animation: rotating 7s linear infinite; */
-  /* animation-play-state: paused; */
 }
-
-/* @keyframes rotating 
-{
-  0% 
-  {
-    --a: 0deg;
-  }
-  100% 
-  {
-    --a: 360deg;
-  }
-} */
 
 .box-member::before 
 {
@@ -316,11 +390,7 @@
   width: 100%;
   height: 100%;
   background: repeating-conic-gradient(from 90deg, #3AAD6E 5%, #3AAD6E 20%, transparent 0%, transparent 55%);
-  /* background: repeating-conic-gradient(from var(--a), #3AAD6E 0%, #3AAD6E 5%, transparent 5%, transparent 40%, #3AAD6E 50%); */
   border-radius: 10px;
-  /* animation: rotating 7s linear infinite; */
-  /* animation-delay: -1s; */
-  /* animation-play-state: paused; */
 }
 
 .box-member:hover,
@@ -379,24 +449,27 @@
 
 .box-member .info-member:hover .info-member-name h5 {
   bottom: 30px;
+  text-shadow: 0 0 15px rgba(255, 255, 255, 0.5), 0 0 25px rgba(255, 255, 255, 0.5), 0 0 35px rgba(56, 217, 89, 0.5), 0 0 45px rgba(56, 217, 89, 0.5), 0 0 55px rgba(56, 217, 89, 0.5), 0 0 65px rgba(56, 217, 89, 0.5), 0 0 75px rgba(56, 217, 89, 0.5);
   transition: 0.5s;
 }
 
 .box-member:hover::after 
 {
-  /* inset: 0;
-  border: 5px solid #FFF;
-  border-radius: 10px;
-  transition: 0.6s; */
+  
 }
 
 .box-member:hover .info-member 
 {
   inset: 0;
   border-radius: 10px;
-  /* border: 2px solid #3AAD6E; */
   transition: inset 0.6s;
 }
+
+/*
+--------------------------------------------
+FIM - CSS CONTAINER TIME TECH
+---------------------------------------------
+*/
 
 @media only screen and (max-width : 991px) 
 {
