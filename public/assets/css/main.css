@@ -1803,28 +1803,28 @@ section,
 
 #overlay-atv1 
 {
-  background: url('http://localhost:8888/public/assets/img/atividades/atividade1.jpg');
+  background: url('/assets/img/atividades/atividade1.jpg');
   background-size: cover;
   background-position: center;
 }
 
 #overlay-atv2 
 {
-  background: url('http://localhost:8888/public/assets/img/atividades/atividade2.jpg');
+  background: url('/assets/img/atividades/atividade2.jpg');
   background-size: cover;
   background-position: center;
 }
 
 #overlay-atv3 
 {
-  background: url('http://localhost:8888/public/assets/img/atividades/atividade3.jpg');
+  background: url('/assets/img/atividades/atividade3.jpg');
   background-size: cover;
   background-position: center;
 }
 
 #overlay-atv4 
 {
-  background: url('http://localhost:8888/public/assets/img/atividades/atividade4.jpg');
+  background: url('/assets/img/atividades/atividade4.jpg');
   background-size: cover;
   background-position: center;
 }
