@@ -126,6 +126,7 @@ h6 {
 .header .btn-getstarted:focus {
   color: var(--contrast-color);
   background: var(--accent-color);
+  font-style: 'Poppins', serif;
   font-size: 14px;
   padding: 8px 25px;
   margin: 0 0 0 30px;
@@ -1871,4 +1872,30 @@ section,
 
 .logo-footer img {
   max-width: 150px;
+}
+
+@media only screen and (max-width : 991px)
+{
+
+  .hero {
+    background-image: url('../img/background-intro-mobile.jpg');
+    min-height: 50vh;
+    padding: 30px 0 30px 0;
+  }
+
+  .hero-title {
+    height: 30vh;
+    order: 1 !important;
+  }
+
+  .hero h3 {
+    margin: 10px 0 10px 0;
+  }
+
+  .hero-img {
+    height: 70vh;
+    order: 2 !important;
+  }
+
+
 }
