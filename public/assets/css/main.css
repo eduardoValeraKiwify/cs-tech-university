@@ -1661,6 +1661,7 @@ section,
     border-color: light-dark(rgba(118, 118, 118, 0.3), rgba(195, 195, 195, 0.3));
 }
 
+#overlay-atv .container-atividade, 
 #overlay-atv1 .container-atividade, 
 #overlay-atv2 .container-atividade, 
 #overlay-atv3 .container-atividade, 
@@ -1673,9 +1674,10 @@ section,
   background: rgba(0, 0, 0, 0.95);
 }
 
-#overlay-atv1 .container-atividade .row,
-#overlay-atv2 .container-atividade .row,
-#overlay-atv3 .container-atividade .row,
+#overlay-atv .container-atividade .row, 
+#overlay-atv1 .container-atividade .row, 
+#overlay-atv2 .container-atividade .row, 
+#overlay-atv3 .container-atividade .row, 
 #overlay-atv4 .container-atividade .row 
 {
   margin: 0;
@@ -1780,6 +1782,7 @@ section,
   transition: 0.5s;
 }
 
+#overlay-atv, 
 #overlay-atv1, 
 #overlay-atv2, 
 #overlay-atv3, 
@@ -1801,6 +1804,7 @@ section,
   z-index: 1022;
 }
 
+#overlay-atv, 
 #overlay-atv1 
 {
   background: url('/assets/img/atividades/atividade1.jpg');
@@ -1829,6 +1833,7 @@ section,
   background-position: center;
 }
 
+#overlay-atv.active, 
 #overlay-atv1.active, 
 #overlay-atv2.active, 
 #overlay-atv3.active, 
@@ -1836,6 +1841,7 @@ section,
   transform: scale(1);
 }
 
+#overlay-atv p, 
 #overlay-atv1 p, 
 #overlay-atv2 p, 
 #overlay-atv3 p, 
@@ -1843,6 +1849,7 @@ section,
   margin-top: 20px;
 }
 
+#toggleIcon, 
 #toggleIcon1, 
 #toggleIcon2, 
 #toggleIcon3, 
@@ -1860,6 +1867,7 @@ section,
   transition: 0.5s;
 }
 
+#toggleIcon:hover, 
 #toggleIcon1:hover, 
 #toggleIcon2:hover, 
 #toggleIcon3:hover, 

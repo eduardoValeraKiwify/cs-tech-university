@@ -223,6 +223,14 @@ INICIO - CSS CONTAINER RANKING
   text-transform: uppercase;
 }
 
+.info-participant .info-participant-waiting 
+{
+  width: 100%;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bolder;
+}
+
 .info-participant-thumb 
 {
   width: 140px;
