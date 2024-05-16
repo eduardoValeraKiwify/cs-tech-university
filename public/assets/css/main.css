@@ -1782,6 +1782,24 @@ section,
   transition: 0.5s;
 }
 
+.prazos a {
+  color: #ffffff;
+  text-align: center;
+  cursor: pointer;
+  margin-top: 25px;
+  background-color: #3AAD6E;
+  border: 2px;
+  border-radius: 15px;
+  padding: 10px;
+  width: 300px;
+  transition: 0.5s;
+}
+
+.prazos a:hover {
+  background-color: #1e643e;
+  transition: 0.5s;
+}
+
 #overlay-atv, 
 #overlay-atv1, 
 #overlay-atv2, 
