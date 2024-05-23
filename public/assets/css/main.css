@@ -1987,6 +1987,11 @@ section,
 
 @media only screen and (max-width : 576px) 
 {
+  .hero-img 
+  {
+    height: 300px;
+  }
+
   .img-title img 
   {
     height: 300px;
