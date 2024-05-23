@@ -71,7 +71,7 @@ INICIO - CSS CONTAINER ATIVIDADES
   content: "";
   top: 50%;
   transform: translateY(-50%);
-  width: 100%;
+  width: 99.99%;
   height: 10px;
   position: absolute;
   background: #3AAD6E;
@@ -226,12 +226,7 @@ INICIO - CSS CONTAINER RANKING
   text-align: center;
 }
 
-.info-participant-name h5 
-{
-  
-}
-
-.info-participant-name::before, .info-participant-score::before 
+.info-participant-name::before, .info-participant-score::before, .info-participant-achievements::before 
 {
   content: "";
   position: absolute;
@@ -267,6 +262,70 @@ INICIO - CSS CONTAINER RANKING
   color: var(--accent-color);
 }
 
+.info-participant-achievements 
+{
+  position: relative;
+  flex-grow: 2;
+  text-align: center;
+}
+
+.info-participant-achievements .achievements 
+{
+  display: flex;
+  justify-content: center;
+}
+
+.info-participant-achievements h5 {
+  transition: 0.5s;
+}
+
+.info-participant-achievements .achievements .achievement 
+{
+  transition: 0.5s;
+  display: block;
+  width: 70px;
+  height: 70px;
+  margin-right: 10px;
+}
+
+.info-participant-achievements .achievements .achievement.achievement-1, 
+.info-participant-achievements .achievements .achievement.achievement-2, 
+.info-participant-achievements .achievements .achievement.achievement-3, 
+.info-participant-achievements .achievements .achievement.achievement-4 
+{
+  transition: 0.5s;
+  background-position: center;
+  background-size: cover;
+}
+
+.info-participant-achievements .achievements .achievement.achievement-1 
+{
+  background-image: url('/assets/img/achievement-1.png');
+}
+
+.info-participant-achievements .achievements .achievement.achievement-2 
+{
+  background-image: url('/assets/img/achievement-2.png');
+}
+
+.info-participant-achievements .achievements .achievement.achievement-3 
+{
+  background-image: url('/assets/img/achievement-3.png');
+}
+
+.info-participant-achievements .achievements .achievement.achievement-4 
+{
+  background-image: url('/assets/img/achievement-4.png');
+}
+
+.info-participant-achievements .achievements .achievement.achievement-1.achievement-disabled, 
+.info-participant-achievements .achievements .achievement.achievement-2.achievement-disabled, 
+.info-participant-achievements .achievements .achievement.achievement-3.achievement-disabled, 
+.info-participant-achievements .achievements .achievement.achievement-4.achievement-disabled 
+{
+  background: none;
+}
+
 .box-participant:hover::after 
 {
   transition: 0.5s;
@@ -278,7 +337,10 @@ INICIO - CSS CONTAINER RANKING
 .box-participant:hover .info-participant-thumb img {
   height: 130px;
   margin-left: -10px;
-  transition: 0.5s;
+  -webkit-box-shadow: 0px 0px 10px 5px rgba(56, 217, 89, 0.6);
+    -moz-box-shadow: 0px 0px 10px 5px rgba(56, 217, 89, 0.6);
+    box-shadow: 0px 0px 10px 5px rgba(56, 217, 89, 0.6);
+    transition: 0.5s;
 }
 
 .box-participant:hover .info-participant-name
@@ -364,6 +426,26 @@ INICIO - CSS CONTAINER RANKING
   0 0 55px rgba(56, 217, 89, 0.5), 
   0 0 65px rgba(56, 217, 89, 0.5), 
   0 0 75px rgba(56, 217, 89, 0.5);
+}
+
+.box-participant:hover .info-participant-achievements h5 {
+  font-size: 1.4rem;
+  text-shadow: 
+  0 0 15px rgba(255, 255, 255, 0.5), 
+  0 0 25px rgba(255, 255, 255, 0.5), 
+  0 0 35px rgba(56, 217, 89, 0.5), 
+  0 0 45px rgba(56, 217, 89, 0.5), 
+  0 0 55px rgba(56, 217, 89, 0.5), 
+  0 0 65px rgba(56, 217, 89, 0.5), 
+  0 0 75px rgba(56, 217, 89, 0.5);
+  transition: 0.5s;
+}
+
+.box-participant:hover .info-participant-achievements .achievement 
+{
+  width: 75px;
+  height: 75px;
+  transition: 0.5s;
 }
 
 .box-participant:hover .box-participant-shine 
@@ -539,7 +621,7 @@ FIM - CSS CONTAINER TIME TECH
   }
 
   .box-participant {
-    height: 350px;
+    height: 450px;
   }
 
   .info-participant
@@ -548,7 +630,7 @@ FIM - CSS CONTAINER TIME TECH
     padding: 0;
   }
 
-  .info-participant-name::before, .info-participant-score::before
+  .info-participant-name::before, .info-participant-score::before, .info-participant-achievements::before 
   {
     display: none;
   }

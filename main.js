@@ -9,28 +9,53 @@ async function fetchActivitiesDataFromAPIEndpoint() {
     `).join('')
 
     document.querySelector("#overlay-atv-ref").insertAdjacentHTML("afterend", activities.map((activity, index) => `
-    <div id="overlay-atv${index + 1}" style="background-image: url('${activity.properties.Imagem.rich_text.length > 0 ? activity.properties.Imagem.rich_text[0].plain_text : ''}') background-size: cover; background-position: center;">
-      <div id="toggleIcon1" onclick="menuToggle(${index + 1})">
-        <div class="close-btn bi bi-x-square"></div>
+    ${!activity.properties.Liberado.checkbox? `
+      <div id="overlay-atv${index + 1}" style="background-image: url('') background-size: cover; background-position: center;">
+        <div id="toggleIcon1" onclick="">
+          <div class="close-btn bi bi-x-square"></div>
+        </div>
+        <div class="container-atividade">
+          <div class="row">
+          <div class="img-title col-sm">
+              <img src="" alt="">
+              <h3>Texto</h3>
+          </div>
+          <div class="descricao-atividade col-sm">
+              <p>Texto</p>
+          </div>
+          <div class="prazos col-sm">
+              <h3>Período da atividade</h3>
+              <p>Inicio: 00/00</p>
+              <p>Final: 00/00</p>
+              <a href="#">Clique aqui para começar a missão</a>
+          </div>
+          </div>
+        </div>
       </div>
-      <div class="container-atividade">
-        <div class="row">
-        <div class="img-title col-sm">
-            <img src="${activity.properties.Imagem.rich_text.length > 0 ? activity.properties.Imagem.rich_text[0].plain_text : ''}" alt="">
-            <h3>${activity.properties.Titulo.rich_text.length > 0 ? activity.properties.Titulo.rich_text[0].plain_text : 'Texto'}</h3>
+    ` : `
+      <div id="overlay-atv${index + 1}" style="background-image: url('${activity.properties.Imagem.rich_text.length > 0 ? activity.properties.Imagem.rich_text[0].plain_text : ''}') background-size: cover; background-position: center;">
+        <div id="toggleIcon1" onclick="menuToggle(${index + 1})">
+          <div class="close-btn bi bi-x-square"></div>
         </div>
-        <div class="descricao-atividade col-sm">
-            <p>${activity.properties.Texto.rich_text.length > 0 ? activity.properties.Texto.rich_text[0].plain_text.replace(/\n/g, '</p><p>') : 'Texto'}</p>
-        </div>
-        <div class="prazos col-sm">
-            <h3>Período da atividade</h3>
-            <p>Inicio: ${activity.properties['Data de início'].rich_text.length > 0 ? activity.properties['Data de início'].rich_text[0].plain_text : '00/00'}</p>
-            <p>Final: ${activity.properties['Data de fim'].rich_text.length > 0 ? activity.properties['Data de fim'].rich_text[0].plain_text : '00/00'}</p>
-            <a href="${activity.properties.Link.url !== null ? activity.properties.Link.url : '#'}">Clique aqui para começar a missão</a>
-        </div>
+        <div class="container-atividade">
+          <div class="row">
+          <div class="img-title col-sm">
+              <img src="${activity.properties.Imagem.rich_text.length > 0 ? activity.properties.Imagem.rich_text[0].plain_text : ''}" alt="">
+              <h3>${activity.properties.Titulo.rich_text.length > 0 ? activity.properties.Titulo.rich_text[0].plain_text : 'Texto'}</h3>
+          </div>
+          <div class="descricao-atividade col-sm">
+              <p>${activity.properties.Texto.rich_text.length > 0 ? activity.properties.Texto.rich_text[0].plain_text.replace(/\n/g, '</p><p>') : 'Texto'}</p>
+          </div>
+          <div class="prazos col-sm">
+              <h3>Período da atividade</h3>
+              <p>Inicio: ${activity.properties['Data de início'].rich_text.length > 0 ? activity.properties['Data de início'].rich_text[0].plain_text : '00/00'}</p>
+              <p>Final: ${activity.properties['Data de fim'].rich_text.length > 0 ? activity.properties['Data de fim'].rich_text[0].plain_text : '00/00'}</p>
+              <a href="${activity.properties.Link.url !== null ? activity.properties.Link.url : '#'}">Clique aqui para começar a missão</a>
+          </div>
+          </div>
         </div>
       </div>
-    </div>
+    `}
     `).join(''))
   }
 }
@@ -72,7 +97,15 @@ async function fetchRankingDataFromAPIEndpoint() {
               <h5>Pontuação</h5>
               <span>${participant.properties['Nota Final Total'].formula.number}</span>
             </div>
-            
+            <div class="info-participant-achievements">
+              <h5>Conquistas desbloqueadas</h5>
+              <div class="achievements">
+                <span class="achievement achievement-1 ${!participant.properties.Achievement1.checkbox ? 'achievement-disabled' : ''}"></span>
+                <span class="achievement achievement-2 ${!participant.properties.Achievement2.checkbox ? 'achievement-disabled' : ''}"></span>
+                <span class="achievement achievement-3 ${!participant.properties.Achievement3.checkbox ? 'achievement-disabled' : ''}"></span>
+                <span class="achievement achievement-4 ${!participant.properties.Achievement4.checkbox ? 'achievement-disabled' : ''}"></span>
+              </div>
+            </div>
           </div>
           <div class="box-participant-shine"></div>
         </div>

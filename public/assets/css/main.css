@@ -823,8 +823,8 @@ section,
 }
 
 .hero-img {
-  width: 350px;
-  height: 350px;
+  width: 500px;
+  height: 500px;
 }
 
 .hero .btn-get-started {
@@ -1911,44 +1911,18 @@ section,
 {
 
   .hero {
-    background-image: url('../img/background-intro-mobile.jpg');
-    min-height: 90vh;
     padding: 30px 0 30px 0;
     align-items: flex-start;
   }
 
   .hero-title {
-    margin-top: 10px;
-    margin-bottom: 30px;
-    height: 50%;
-    order: 1 !important;
     align-items: center;
-  }
-
-  .hero h1 {
-    font-size: 35px;
-    line-height: 50px;
-  }
-
-  .hero h3 {
-    margin: 5px 0 10px 0;
-    font-size: 20px;
-  }
-
-  .hero .hero-ranking-button a {
-    font-size: 15px;
   }
 
   .hero-img {
     width: 100%;
-    height: 150px;
-    order: 2 !important;
     display: flex;
     justify-content: center;
-  }
-
-  .hero-img img {
-    height: 100%;
   }
 
   #overlay-atv1 .container-atividade, 
