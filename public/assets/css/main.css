@@ -14,16 +14,18 @@
 
 @font-face {
   font-family: 'Barlow';
+  src: url('/assets/fonts/Barlow/barlow-extrabold-webfont.woff2') format('woff2'),
+       url('/assets/fonts/Barlow/barlow-extrabold-webfont.woff') format('woff');
+  font-weight: normal;
   font-style: normal;
-  font-weight: 900;
-  src: url(public/assets/fonts/Barlow/Barlow-ExtraBold.ttf) format('truetype');
 }
 
 @font-face {
   font-family: 'Poppins';
+  src: url('/assets/fonts/Poppins/poppins-regular-webfont.woff2') format('woff2'),
+       url('/assets/fonts/Poppins/poppins-regular-webfont.woff') format('woff');
+  font-weight: normal;
   font-style: normal;
-  font-weight: 400;
-  src: url(public/assets/fonts/Poppins/Poppins-Regular.ttf) format('truetype');
 }
 
 :root {
