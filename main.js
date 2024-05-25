@@ -5,23 +5,23 @@ async function fetchActivitiesDataFromAPIEndpoint() {
 
   if(activities.length > 0) {
     document.querySelector("#atividades-botoes").innerHTML = activities.map((activity, index) => `
-      <button ${!activity.properties.Liberado.checkbox ? 'disabled': ''} class="atv-btn" onclick="menuToggle(${index + 1})">${activity.properties.Name.title.length > 0 ? activity.properties.Name.title[0].plain_text : 'Atividade'}</button>
+      <button ${!activity.properties.Liberado.checkbox ? 'disabled': ''} class="atv-btn" onclick="menuToggle(${index + 1}, true)">${activity.properties.Name.title.length > 0 ? activity.properties.Name.title[0].plain_text : 'Atividade'}</button>
     `).join('')
 
     document.querySelector("#overlay-atv-ref").insertAdjacentHTML("afterend", activities.map((activity, index) => `
     ${!activity.properties.Liberado.checkbox? `
-      <div id="overlay-atv${index + 1}" style="background-image: url('') background-size: cover; background-position: center;">
-        <div id="toggleIcon1" onclick="">
+      <div id="overlay-atv${index + 1}" class="overlay-atv" style="background-image: url('/assets/img/atividades/atividade1.jpg'); background-size: cover; background-position: center;">
+        <div class="toggleIconActivities" onclick="menuToggle(${index + 1}, false)">
           <div class="close-btn bi bi-x-square"></div>
         </div>
         <div class="container-atividade">
           <div class="row">
           <div class="img-title col-sm">
-              <img src="" alt="">
-              <h3>Texto</h3>
+              <img src="/assets/img/atividades/atividade1.jpg" alt="">
+              <h3>Lorem ipsum dolor sit amet</h3>
           </div>
           <div class="descricao-atividade col-sm">
-              <p>Texto</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed euismod nisi porta lorem mollis aliquam ut porttitor leo. Non pulvinar neque laoreet suspendisse interdum consectetur libero id. Lectus vestibulum mattis ullamcorper velit sed ullamcorper morbi. Morbi tristique senectus et netus et malesuada fames ac turpis. Nisi scelerisque eu ultrices vitae auctor eu augue. Viverra vitae congue eu consequat ac felis donec et. Eget duis at tellus at. Phasellus egestas tellus rutrum tellus pellentesque eu. Senectus et netus et malesuada fames. Netus et malesuada fames ac turpis. Id cursus metus aliquam eleifend mi. Et ultrices neque ornare aenean euismod elementum. Commodo ullamcorper a lacus vestibulum sed arcu. In egestas erat imperdiet sed euismod nisi porta lorem mollis. Id ornare arcu odio ut. Habitasse platea dictumst quisque sagittis purus sit amet volutpat. Turpis egestas maecenas pharetra convallis posuere.</p>
           </div>
           <div class="prazos col-sm">
               <h3>Período da atividade</h3>
@@ -33,18 +33,18 @@ async function fetchActivitiesDataFromAPIEndpoint() {
         </div>
       </div>
     ` : `
-      <div id="overlay-atv${index + 1}" style="background-image: url('${activity.properties.Imagem.rich_text.length > 0 ? activity.properties.Imagem.rich_text[0].plain_text : ''}') background-size: cover; background-position: center;">
-        <div id="toggleIcon1" onclick="menuToggle(${index + 1})">
+      <div id="overlay-atv${index + 1}" class="overlay-atv" style="background-image: url('${activity.properties.Imagem.rich_text.length > 0 ? activity.properties.Imagem.rich_text[0].plain_text : '/assets/img/atividades/atividade1.jpg'}'); background-size: cover; background-position: center;">
+        <div class="toggleIconActivities" onclick="menuToggle(${index + 1}, false)">
           <div class="close-btn bi bi-x-square"></div>
         </div>
         <div class="container-atividade">
           <div class="row">
           <div class="img-title col-sm">
-              <img src="${activity.properties.Imagem.rich_text.length > 0 ? activity.properties.Imagem.rich_text[0].plain_text : ''}" alt="">
-              <h3>${activity.properties.Titulo.rich_text.length > 0 ? activity.properties.Titulo.rich_text[0].plain_text : 'Texto'}</h3>
+              <img src="${activity.properties.Imagem.rich_text.length > 0 ? activity.properties.Imagem.rich_text[0].plain_text : '/assets/img/atividades/atividade1.jpg'}" alt="">
+              <h3>${activity.properties.Titulo.rich_text.length > 0 ? activity.properties.Titulo.rich_text[0].plain_text : 'Lorem ipsum dolor sit amet'}</h3>
           </div>
           <div class="descricao-atividade col-sm">
-              <p>${activity.properties.Texto.rich_text.length > 0 ? activity.properties.Texto.rich_text[0].plain_text.replace(/\n/g, '</p><p>') : 'Texto'}</p>
+              <p>${activity.properties.Texto.rich_text.length > 0 ? activity.properties.Texto.rich_text[0].plain_text.replace(/\n/g, '</p><p>') : 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'}</p>
           </div>
           <div class="prazos col-sm">
               <h3>Período da atividade</h3>
