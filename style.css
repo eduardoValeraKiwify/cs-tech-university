@@ -596,6 +596,63 @@ FIM - CSS CONTAINER TIME TECH
 ---------------------------------------------
 */
 
+@media only screen and (max-width : 1024px) 
+{
+  .box-participant:hover::after 
+  {
+    inset: 8px;
+    border-color: #000;
+    border-radius: 10px;    
+  }
+  
+  .box-participant:hover .info-participant-thumb img {
+    height: 115px;
+    margin-left: 0;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+  }
+  
+  .box-participant:hover .info-participant-name h5 
+  {
+    font-size: 1.25rem;
+    text-shadow: none;
+  }
+  
+  .box-participant:hover .info-participant-name span 
+  {
+    text-shadow: none;
+  }
+  
+  .box-participant:hover .info-participant-score h5 
+  {
+    font-size: 1.25rem;
+    text-shadow: none;
+  }
+  
+  .box-participant:hover .info-participant-score span 
+  {
+    text-shadow: none;
+  }
+  
+  .box-participant:hover .info-participant-achievements h5 {
+    font-size: 1.25rem;
+    text-shadow: none;
+  }
+  
+  .box-participant:hover .info-participant-achievements .achievement 
+  {
+    width: 70px;
+    height: 70px;
+  }
+  
+  .box-participant:hover .box-participant-shine 
+  {
+    opacity: 0;
+  }
+  
+}
+
 @media only screen and (max-width : 991px) 
 {
   #atividades-section 
