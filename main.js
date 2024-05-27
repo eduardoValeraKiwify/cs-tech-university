@@ -50,7 +50,7 @@ async function fetchActivitiesDataFromAPIEndpoint() {
               <h3>Período da atividade</h3>
               <p>Inicio: ${activity.properties['Data de início'].rich_text.length > 0 ? activity.properties['Data de início'].rich_text[0].plain_text : '00/00'}</p>
               <p>Final: ${activity.properties['Data de fim'].rich_text.length > 0 ? activity.properties['Data de fim'].rich_text[0].plain_text : '00/00'}</p>
-              <a href="${activity.properties.Link.url !== null ? activity.properties.Link.url : '#'}">Clique aqui para começar a missão</a>
+              <a href="${activity.properties.Link.url !== null ? activity.properties.Link.url : '#'}" target="_blank">Clique aqui para começar a missão</a>
           </div>
           </div>
         </div>
