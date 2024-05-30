@@ -650,6 +650,11 @@ FIM - CSS CONTAINER TIME TECH
   {
     opacity: 0;
   }
+
+  .footer .footer-contact p 
+  {
+    text-align: center;
+  }
   
 }
 

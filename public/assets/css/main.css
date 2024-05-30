@@ -95,6 +95,26 @@ h6 {
   font-family: var(--heading-font);
 }
 
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #000; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #3AAD6E; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
 /*--------------------------------------------------------------
 # Global Header
 --------------------------------------------------------------*/
